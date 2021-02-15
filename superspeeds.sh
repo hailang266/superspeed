@@ -186,56 +186,16 @@ if [[ ${selection} == 3 ]]; then
 
 	 speed_test '3633' '上海' '电信'
 	 speed_test '28139' '上海５Ｇ' '电信'
-	 speed_test '6168' '云南昆明' '电信'
-	 speed_test '27539' '云南昆明５Ｇ' '电信'
-	 speed_test '24012' '内蒙古呼和浩特' '电信'
-	 speed_test '21470' '内蒙古鄂尔多斯' '电信'
-	 speed_test '4751' '北京' '电信'
-	 speed_test '27377' '北京５Ｇ' '电信'
-	 speed_test '4624' '四川成都' '电信'
-	 speed_test '6714' '天津' '电信'
-	 speed_test '17145' '安徽安徽合肥' '电信'
-	 speed_test '9151' '广东广州' '电信'
-	 speed_test '10775' '广东广州' '电信'
-	 speed_test '17251' '广东广州' '电信'
-	 speed_test '27594' '广东广州５Ｇ' '电信'
-	 speed_test '5081' '广东深圳' '电信'
-	 speed_test '10192' '广西南宁' '电信'
-	 speed_test '10305' '广西南宁' '电信'
-	 speed_test '22724' '广西南宁' '电信'
-	 speed_test '27810' '广西南宁' '电信'
-	 speed_test '27304' '新疆乌鲁木齐' '电信'
-	 speed_test '27575' '新疆乌鲁木齐' '电信'
-	 speed_test '5316' '江苏南京' '电信'
-	 speed_test '26352' '江苏南京５Ｇ' '电信'
-	 speed_test '5324' '江苏徐州' '电信'
-	 speed_test '5396' '江苏苏州' '电信'
-	 speed_test '5317' '江苏连云港' '电信'
-	 speed_test '6345' '江西南昌' '电信'
-	 speed_test '6473' '江西南昌' '电信'
-	 speed_test '7643' '江西南昌' '电信'
-	 speed_test '16399' '江西南昌' '电信'
-	 speed_test '4595' '河南郑州' '电信'
 	 speed_test '7509' '浙江杭州' '电信'
-	 speed_test '20038' '湖北武汉' '电信'
-	 speed_test '23665' '湖北武汉' '电信'
-	 speed_test '23844' '湖北武汉' '电信'
-	 speed_test '24011' '湖北武汉' '电信'
-	 speed_test '6435' '湖北襄阳' '电信'
-	 speed_test '12637' '湖北襄阳' '电信'
-	 speed_test '6132' '湖南长沙' '电信'
-	 speed_test '28225' '湖南长沙' '电信'
-	 speed_test '3973' '甘肃兰州' '电信'
-	 speed_test '6592' '重庆' '电信'
-	 speed_test '16983' '重庆' '电信'
-	 speed_test '19076' '重庆' '电信'
-	 speed_test '19918' '青海西宁' '电信'
+	 speed_test '5396' '江苏苏州5G' '电信'
+
+
 
 	end=$(date +%s)  
 	rm -rf /tmp/speedtest.py
 	echo "——————————————————————————————————————————————————————————————————————"
 	time=$(( $end - $start ))
-	if [[ $time -gt 60 ]]; then
+	if [[ $time -gt 300 ]]; then
 		min=$(expr $time / 60)
 		sec=$(expr $time % 60)
 		echo -ne "     测试完成, 本次测速耗时: ${min} 分 ${sec} 秒"
